@@ -16,7 +16,7 @@ Else: try linux :p
 # What should I do know ?
 The programm is asking you: 
   the number of generation you want,
-  if you want to disable the border (if you disable them every cell will have height neighbor),
+  if you want to disable the border (if you disable them every cell will have eight neighbor),
   and a file to open. Some example are in the firstGeneration folder but feel free to create your own !!
   
 know enjoy ! :D
