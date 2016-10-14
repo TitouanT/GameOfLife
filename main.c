@@ -1,3 +1,6 @@
+/* Titouan Teyssier, 10/14/2016 */
+/*  titouan.teyssier@gmail.com  */
+
 #include <stdio.h>
 #include "structure.h"
 #include "core.h"

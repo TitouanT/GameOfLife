@@ -1,3 +1,6 @@
+/* Titouan Teyssier, 10/14/2016 */
+/*  titouan.teyssier@gmail.com  */
+
 #include <stdio.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>

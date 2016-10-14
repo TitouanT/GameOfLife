@@ -1,8 +1,9 @@
-/*
+/* Titouan Teyssier, 10/14/2016 */
+/*  titouan.teyssier@gmail.com  */
 
+/*
 strucuture.h contain global constant, and type definition who are used in most
 part of the code.
-
 */
 
 #ifndef STRUCTURE_H

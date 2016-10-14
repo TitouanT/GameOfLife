@@ -1,3 +1,6 @@
+/* Titouan Teyssier, 10/14/2016 */
+/*  titouan.teyssier@gmail.com  */
+
 #ifndef DISPLAY_H
 #define  DISPLAY_H
 
