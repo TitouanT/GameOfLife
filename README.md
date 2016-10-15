@@ -20,7 +20,7 @@ wikipedia again:
 >   * Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 
-In my program, a live cell will be represented by this image: ![alt text] (media/alive.png "cell alive")
+In my program, a live cell is represented by this image: ![alt text] (media/alive.png "cell alive")
 
 and a dead one by: ![alt text] (media/dead.png "cell dead")
 
