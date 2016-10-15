@@ -34,14 +34,14 @@ int main () {
 	TT_SDL_Init (); /* initialization of the SDL who's used
 											to display the generation */
 
-	for (i = 0; i <= nbGeneration; i++) {
+	for (i = 0; i <= nbGeneration && TT_SDL_EVENT (); i++) {
 		cursor(4); // counter of generation always displayed on the same line
 		printf("generation n°%d\n", i);
 		displayGen (mat);
 		fillNeighborMatrix (mat, neighbor, borderLess);
 		nextGen (mat, neighbor);
 		// scanf("%*c");
-		/* uncommment this line if you want togo throw generation step by step
+		/* uncommment this line if you want to go throw generation step by step
 		/* by pressing enter */
 	}
 	TT_SDL_Quit(); /* quiting safely the SDL */

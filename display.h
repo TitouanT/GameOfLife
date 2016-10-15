@@ -10,5 +10,6 @@
 int TT_SDL_Init(void);
 void TT_SDL_Quit (void);
 void displayGen (t_cell mat[][N_COLUMN]);
+int TT_SDL_EVENT (void);
 
 #endif

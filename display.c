@@ -15,6 +15,18 @@ SDL_Renderer *renderer; // we can stick them on a renderer
 SDL_Window *lifeWindow; // then we push the renderer
 												// in the window so we can see it
 
+int TT_SDL_EVENT () {
+	SDL_Event event;
+	while (SDL_PollEvent (&event)) {
+		switch (event.type) {
+			case SDL_WINDOWEVENT:
+				if (event.window.event == SDL_WINDOWEVENT_CLOSE) return 0;
+				break;
+		}
+	}
+	return 1;
+}
+
 
 void TT_SDL_Quit () {
 	// destroying all the data used.
