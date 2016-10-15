@@ -1,5 +1,5 @@
-/* Titouan Teyssier, 10/14/2016 */
-/*  titouan.teyssier@gmail.com  */
+# Titouan Teyssier, 10/14/2016
+#  titouan.teyssier@gmail.com 
 
 LIB = -L./lib
 INCLUDE = -I./include
