@@ -7,5 +7,6 @@
 
 int verifNameOfFile (char **argv);
 int createMode (char **argv);
+void writeFile(t_cell mat[][N_COLUMN], char * fileName);
 
 #endif

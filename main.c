@@ -11,8 +11,7 @@
 #include "createMode.h"
 
 int main (int argc, char ** argv) {
-	printf("%d\n", argc);
-	scanf("%*c");
+	
 	if (argc == 3 && strcmp("--createMode", argv[1]) == 0) createMode(argv);
 	else normalMode();
 

@@ -16,7 +16,7 @@ int createMode (char **argv) {
 }
 
 void writeFile(t_cell mat[][N_COLUMN], char * fileName) {
-	char * path[30] = {'m', 'y', 'C', 'r', 'e', 'a', 't', 'i', 'o', 'n', '/'};
+	char path[30] = {'m', 'y', 'C', 'r', 'e', 'a', 't', 'i', 'o', 'n', '/'};
 	int i = 0, j;
 	while (fileName[i] != '\0') {
 		path[i + 11] = fileName[i];
@@ -24,10 +24,10 @@ void writeFile(t_cell mat[][N_COLUMN], char * fileName) {
 	}
 	path[11 + i] = '\0';
 	FILE * file = fopen (path, "w");
-	
+
 	for (i = 0; i < N_LINE; i++)
 		for (j = 0; j < N_COLUMN; j++)
-			if (mat[i][j] == alive) fprintf("%d %d ", i, j);
+			if (mat[i][j] == alive) fprintf(file, "%d %d ", i, j);
 
 	fclose(file);
 }
