@@ -1,11 +1,10 @@
 /* Titouan Teyssier, 10/14/2016 */
 /*  titouan.teyssier@gmail.com  */
 
-#ifndef MAIN_H
-#define  MAIN_H
+#ifndef CORE_H
+#define  CORE_H
 
 #include "structure.h"
-
 
 // parameter of the Game Of Life
 #define BIRTH 3
@@ -29,5 +28,6 @@ int nbNeighborBorderLess (t_cell mat[][N_COLUMN], int ligne, int colonne);
 void fillNeighborMatrix (t_cell mat[][N_COLUMN], int neighbor[][N_COLUMN], int borderLess);
 void nextGen (t_cell mat[][N_COLUMN], int neighbor[][N_COLUMN]);
 void readMatrix (t_cell mat[][N_COLUMN]);
+void initMatrix(t_cell mat[][N_COLUMN]);
 
 #endif

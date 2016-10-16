@@ -15,12 +15,20 @@ SDL_Renderer *renderer; // we can stick them on a renderer
 SDL_Window *lifeWindow; // then we push the renderer
 												// in the window so we can see it
 
-int TT_SDL_EVENT () {
+int TT_SDL_Event () {
 	SDL_Event event;
 	while (SDL_PollEvent (&event)) {
 		switch (event.type) {
 			case SDL_WINDOWEVENT:
-				if (event.window.event == SDL_WINDOWEVENT_CLOSE) return 0;
+				if (event.window.event == SDL_WINDOWEVENT_CLOSE) {
+					int rep;
+					printf("are you sure ? (0: yes) ");
+					scanf("%d", &rep);
+					return (rep == 0) ? 0 : 1;
+				}
+				break;
+			case SDL_KEYUP:
+				if (event.key.keysym.sym == SDLK_RETURN) return ENTER_RELEASED;
 				break;
 		}
 	}
@@ -95,7 +103,8 @@ int TT_SDL_Init() {
 }
 
 void displayGen (t_cell mat[][N_COLUMN]) {
-	int i, j;
+	int i, j, mouseX, mouseY;
+	Uint32 button;
 	//SDL_QueryTexture(deadTexture, NULL, NULL, &largeur, &hauteur);
 	for (i = 0; i < N_LINE; i++) {
 		for (j = 0; j < N_COLUMN; j++){
@@ -105,8 +114,20 @@ void displayGen (t_cell mat[][N_COLUMN]) {
 			else SDL_RenderCopy (renderer, deadTexture, NULL, &dest);
 		}
 	}
+
+	SDL_PumpEvents();
+	button = SDL_GetMouseState(&mouseX, &mouseY);
+	SDL_Rect dest = { mouseX - (mouseX % SIZE_CELL), mouseY - (mouseY % SIZE_CELL), SIZE_CELL, SIZE_CELL};
+	SDL_RenderCopy (renderer, aliveTexture, NULL, &dest);
+
+	if (button & SDL_BUTTON(1)) {
+		mat[mouseY / SIZE_CELL][mouseX / SIZE_CELL] = alive;
+	}
+
 	SDL_RenderPresent (renderer);
 	// when finished processing all the matrix, the renderer is shown.
-	SDL_Delay (GENERATION_TIME);
-	// and we wait a little to be able to see it.
+}
+
+void TT_SDL_Delay (int time) {
+	SDL_Delay (time);
 }

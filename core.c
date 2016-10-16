@@ -7,15 +7,20 @@
 #include <time.h>
 #include "core.h"
 
+void initMatrix (t_cell mat[][N_COLUMN]) {
+	int i, j;
+	for (i = 0; i < N_LINE; i++)
+		for (j = 0; j < N_COLUMN; j++)
+			mat[i][j] = dead;
+}
+
 void readMatrix (t_cell mat[][N_COLUMN]) {
 	/*fill the matrix according to coordinate of alive cell stored in a file */
 	FILE * file = NULL;
 	char fileName[50];
 	int i, j, etat, isRandom = 0;
 
-	for (i = 0; i < N_LINE; i++)
-		for (j = 0; j < N_COLUMN; j++)
-			mat[i][j] = dead; /*first all the cells are dead*/
+	initMatrix(mat); /*first all the cells are dead*/
 
 	while (file == NULL && isRandom == 0) { // the user have the choice to open an
 																					// existent file or to create a random
