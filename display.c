@@ -123,6 +123,9 @@ void displayGen (t_cell mat[][N_COLUMN]) {
 	if (button & SDL_BUTTON(1)) {
 		mat[mouseY / SIZE_CELL][mouseX / SIZE_CELL] = alive;
 	}
+	else if (button & SDL_BUTTON(3)) {
+		mat[mouseY / SIZE_CELL][mouseX / SIZE_CELL] = dead;
+	}
 
 	SDL_RenderPresent (renderer);
 	// when finished processing all the matrix, the renderer is shown.
