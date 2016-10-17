@@ -1,8 +1,11 @@
 # Titouan Teyssier, 10/14/2016
 #  titouan.teyssier@gmail.com
 
-LIB = -L./lib
-INCLUDE = -I./include
+#if you followed my tuto to install the sdl in your home,
+#uncomment the lines 7 and 8.
+
+#LIB = -L $HOME/SDL/lib
+#INCLUDE = -I $HOME/SDL/include
 
 all: prog.out
 
