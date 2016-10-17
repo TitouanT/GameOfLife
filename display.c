@@ -92,15 +92,14 @@ int TT_SDL_Init() {
 		return -1;
 	}
 
-	//SDL_SetRenderDrawColor(renderer, 72, 72, 72, 255); // donne la couleur de nettoyage
-	//SDL_RenderClear(renderer); // nettoie
+	SDL_SetRenderDrawColor(renderer, 72, 72, 72, 255); // donne la couleur de nettoyage
+	SDL_RenderClear(renderer); // nettoie
 	return 0;
 }
 
 void displayGen (t_cell mat[][N_COLUMN]) {
 	int i, j, mouseX, mouseY;
 	Uint32 button;
-	//SDL_QueryTexture(deadTexture, NULL, NULL, &largeur, &hauteur);
 	for (i = 0; i < N_LINE; i++) {
 		for (j = 0; j < N_COLUMN; j++){
 			SDL_Rect dest = { j * SIZE_CELL, i * SIZE_CELL, SIZE_CELL, SIZE_CELL};
