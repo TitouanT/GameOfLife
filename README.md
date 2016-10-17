@@ -53,7 +53,7 @@ I use the __SDL2__ (Simple Direct-media Layer) with __SDL image 2.0__. They are 
 
 ## Install the SDL2 and SDL image with or without super user rights:
 
-To simplify we will that those who have super user rights and want to install it globally teamA and the other teamB. 
+To simplify we will say that those who have super user rights and want to install it globally teamA and the other teamB. 
 For both methods, we are going to compile it from source, you can do it on linux, mac and windows (command are given for linux so you may have to find the equivalent on windows):
 
    * first you have to download the source frome [here](http://libsdl.org/download-2.0.php) for the SDL2 (choose SDL2-2.0.4.tar.gz or .zip) and [here](https://www.libsdl.org/projects/SDL_image) for SDL Image 2.0 (choose  SDL2_image-2.0.1.tar.gz or .zip).
