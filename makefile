@@ -2,7 +2,7 @@
 #  titouan.teyssier@gmail.com
 
 #if you followed my tuto to install the sdl in your home,
-#uncomment the lines 7 and 8.
+#uncomment the lines 7, 8 and 13.
 
 #LIB = -L $HOME/SDL/lib
 #INCLUDE = -I $HOME/SDL/include
@@ -10,7 +10,8 @@
 all: prog.out
 
 prog.out: main.o core.o display.o createMode.o
-	gcc -o $@ $^ ${LIB} -lSDL2-2.0 -lSDL2_image
+	#export LD_LIBRARY_PATH=$HOME/SDL
+	gcc $^ -o $@ ${LIB} -lSDL2 -lSDL2_image
 
 main.o: main.c main.h core.h display.h structure.h
 	gcc -c $<
