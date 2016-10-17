@@ -20,12 +20,7 @@ int TT_SDL_Event () {
 	while (SDL_PollEvent (&event)) {
 		switch (event.type) {
 			case SDL_WINDOWEVENT:
-				if (event.window.event == SDL_WINDOWEVENT_CLOSE) {
-					int rep;
-					printf("are you sure ? (0: yes) ");
-					scanf("%d", &rep);
-					return (rep == 0) ? 0 : 1;
-				}
+				if (event.window.event == SDL_WINDOWEVENT_CLOSE) return 0;
 				break;
 			case SDL_KEYUP:
 				if (event.key.keysym.sym == SDLK_RETURN) return ENTER_RELEASED;

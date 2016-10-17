@@ -10,8 +10,8 @@ part of the code.
 #define STRUCTURE_H
 
 // parameter of the grid
-#define N_LINE 46
-#define N_COLUMN 49
+#define N_LINE 60
+#define N_COLUMN 60
 #define SIZE_CELL 10 // cell are squared with a side of SIZE_CELL
 #define GENERATION_TIME 200 // time in ms between each generation.
 

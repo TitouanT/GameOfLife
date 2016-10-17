@@ -11,7 +11,7 @@
 #include "createMode.h"
 
 int main (int argc, char ** argv) {
-	
+
 	if (argc == 3 && strcmp("--createMode", argv[1]) == 0) createMode(argv);
 	else normalMode();
 
@@ -28,8 +28,6 @@ void normalMode () {
 	t_cell mat[N_LINE][N_COLUMN];
 
 	clear();
-	printf ("Combien de generation voulez vous afficher ? ");
-	scanf ("%d", &nbGeneration);
 	printf ("Voulez vous désactiver les bordures ? (oui 1, non 0) ");
 	scanf ("%d", &borderLess);
 
@@ -37,7 +35,7 @@ void normalMode () {
 	TT_SDL_Init (); /* initialization of the SDL who's used
 											to display the generation */
 
-	for (i = 0; i <= nbGeneration && TT_SDL_Event (); i++) {
+	for (i = 0; TT_SDL_Event (); i++) {
 		cursor(4); // counter of generation always displayed on the same line
 		printf("generation n°%d\n", i);
 		displayGen (mat);
