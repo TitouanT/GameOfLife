@@ -58,7 +58,7 @@ For both methods, we are going to compile it from source, you can do it on linux
 
    * first you have to download the source frome [here](http://libsdl.org/download-2.0.php) for the SDL2 (choose SDL2-2.0.4.tar.gz or .zip) and [here](https://www.libsdl.org/projects/SDL_image) for SDL Image 2.0 (choose  SDL2_image-2.0.1.tar.gz or .zip).
    * then unarchive them.
-   * open a terminal and run (if you have sudo power and you want to install it globally skip 1 and 2):
+   * open a terminal and run (if you are in teamA, skip 1 and 2):
    
       1-  `cd` this command take you into youre home
       
