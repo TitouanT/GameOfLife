@@ -38,7 +38,7 @@ and a dead one by: ![alt text] (media/dead.png "cell dead")
 
 ## Else: try linux :p
 
-# What should I do know ?
+# What should I do now ?
 The programm is asking you:
 
    * if you want to disable the border (if you disable them every cell will have eight neighbor),
