@@ -44,7 +44,7 @@ void normalMode () {
 		TT_SDL_Delay(GENERATION_TIME);
 		// scanf("%*c");
 		/* uncommment this line if you want to go throw generation step by step
-		/* by pressing enter */
+		 * by pressing enter */
 	}
 	TT_SDL_Quit(); /* quiting safely the SDL */
 }
