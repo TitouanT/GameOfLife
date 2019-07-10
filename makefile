@@ -10,7 +10,7 @@
 all: prog.out
 
 prog.out: main.o core.o display.o createMode.o
-	#export LD_LIBRARY_PATH=$HOME/SDL
+	#export LD_LIBRARY_PATH=$HOME/SDL/lib
 	gcc $^ -o $@ ${LIB} -lSDL2 -lSDL2_image
 
 main.o: main.c main.h core.h display.h structure.h
