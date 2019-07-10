@@ -48,10 +48,14 @@ int TT_SDL_Init() {
 	}
 
 	//argument are title, x, y, width, height, Uint32 flags
-	lifeWindow = SDL_CreateWindow ("Game Of Life", 	SDL_WINDOWPOS_CENTERED,
-																									SDL_WINDOWPOS_CENTERED,
-																									N_COLUMN * SIZE_CELL,
-																									N_LINE * SIZE_CELL, 0);
+	lifeWindow = SDL_CreateWindow (
+		"Game Of Life",
+		SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED,
+		N_COLUMN * SIZE_CELL,
+		N_LINE * SIZE_CELL,
+		0
+	);
 
 	if (lifeWindow == NULL) {
 		printf ("\033[41mERROR:\033[0m unable to open a window\n");
